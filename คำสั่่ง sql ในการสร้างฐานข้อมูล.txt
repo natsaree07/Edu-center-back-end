@@ -1,0 +1,188 @@
+-- สร้างฐานข้อมูล
+CREATE DATABASE tutordb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- ใช้ฐานข้อมูล
+USE TutorDB;
+-- ตารางจังหวัด
+CREATE TABLE province (
+    proCode INT PRIMARY KEY AUTO_INCREMENT,
+    proName VARCHAR(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางอำเภอ
+CREATE TABLE district (
+    disCode INT PRIMARY KEY AUTO_INCREMENT,
+    disName VARCHAR(100) NOT NULL,
+    PostCode CHAR(10) NOT NULL,
+    proCode INT NOT NULL,
+    FOREIGN KEY (proCode) REFERENCES province(proCode) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางตำบล
+CREATE TABLE subdistrict (
+    sbdCode INT PRIMARY KEY AUTO_INCREMENT,
+    sbdName VARCHAR(100) NOT NULL,
+    disCode INT NOT NULL,
+    FOREIGN KEY (disCode) REFERENCES district(disCode) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางที่อยู่
+CREATE TABLE addr (
+    addCode INT PRIMARY KEY AUTO_INCREMENT,
+    addPmo VARCHAR(100),
+    addSoy VARCHAR(100),
+    addRoad VARCHAR(100),
+    addNO VARCHAR(20),
+    sbdCode INT NOT NULL,
+    FOREIGN KEY (sbdCode) REFERENCES subdistrict(sbdCode) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางประเภทช่องทางติดต่อ
+CREATE TABLE contactType (
+    conCode INT PRIMARY KEY AUTO_INCREMENT,
+    conName VARCHAR(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางเบอร์โทรนักเรียน
+CREATE TABLE stdphone (
+    stpNo INT PRIMARY KEY AUTO_INCREMENT,
+    stdNumber VARCHAR(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางนักเรียน (Student)
+CREATE TABLE student (
+    stdCode INT PRIMARY KEY AUTO_INCREMENT,
+    stdFName VARCHAR(100) NOT NULL,
+    stdLName VARCHAR(100) NOT NULL,
+    stdFaculty VARCHAR(100) NOT NULL,
+    stdMajor VARCHAR(100) NOT NULL,
+    stdDOB DATE NOT NULL,
+    stdEmail VARCHAR(255) NOT NULL UNIQUE,
+    addCode INT NOT NULL,
+    stpNo INT NULL,
+    conCode INT NULL,
+    FOREIGN KEY (addCode) REFERENCES addr(addCode) ON DELETE CASCADE,
+    FOREIGN KEY (stpNo) REFERENCES stdphone(stpNo) ON DELETE SET NULL,
+    FOREIGN KEY (conCode) REFERENCES contactType(conCode) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางการลงทะเบียน
+CREATE TABLE registration (
+    regCode INT PRIMARY KEY AUTO_INCREMENT,
+    regUser VARCHAR(50) NOT NULL UNIQUE,
+    regPassword VARCHAR(100) NOT NULL,
+    stdCode INT UNIQUE NOT NULL,
+    FOREIGN KEY (stdCode) REFERENCES student(stdCode) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางเบอร์โทรอาจารย์
+CREATE TABLE tutphone (
+    tupNo INT PRIMARY KEY AUTO_INCREMENT,
+    tupNumber VARCHAR(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางอาจารย์
+CREATE TABLE tutor (
+    tutCode INT PRIMARY KEY AUTO_INCREMENT,
+    tutFName VARCHAR(100) NOT NULL,
+    tutLName VARCHAR(100) NOT NULL,
+    tupNo INT NOT NULL,
+    FOREIGN KEY (tupNo) REFERENCES tutphone(tupNo) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางตารางสอนที่ว่าง
+CREATE TABLE availableSchedule (
+    schCode INT PRIMARY KEY AUTO_INCREMENT,
+    schDay VARCHAR(20) NOT NULL,
+    schStart TIME NOT NULL,
+    schEnd TIME NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางหลักสูตรที่สอน
+CREATE TABLE courseteaching (
+    cteCode INT PRIMARY KEY AUTO_INCREMENT,
+    cteName VARCHAR(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางรายละเอียดหลักสูตร
+CREATE TABLE Detail (
+    deCode INT PRIMARY KEY AUTO_INCREMENT,
+    deDescrip TEXT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางสถานที่
+CREATE TABLE place (
+    plcCode INT PRIMARY KEY AUTO_INCREMENT,
+    plcName VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางค่าลงทะเบียนหลักสูตร
+CREATE TABLE CourseRegistrationFees (
+    crfCode INT PRIMARY KEY AUTO_INCREMENT,
+    crfFee DECIMAL(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางรูปภาพ
+CREATE TABLE images (
+    image_id INT PRIMARY KEY AUTO_INCREMENT,  
+    image_url VARCHAR(255) NOT NULL,         
+    image_name VARCHAR(30)                 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางหลักสูตร
+CREATE TABLE course (
+    couCode INT AUTO_INCREMENT PRIMARY KEY,
+    cteCode INT NOT NULL,
+    deCode INT NOT NULL,
+    schCode INT NOT NULL,
+    crfCode INT NOT NULL,
+    plcCode INT NOT NULL,
+    branch VARCHAR(50),
+    image_id INT DEFAULT NULL,
+    FOREIGN KEY (image_id) REFERENCES images(image_id) ON DELETE SET NULL,
+    FOREIGN KEY (cteCode) REFERENCES courseteaching(cteCode) ON DELETE CASCADE,
+    FOREIGN KEY (deCode) REFERENCES Detail(deCode) ON DELETE CASCADE,
+    FOREIGN KEY (schCode) REFERENCES availableSchedule(schCode) ON DELETE CASCADE,
+    FOREIGN KEY (crfCode) REFERENCES CourseRegistrationFees(crfCode) ON DELETE CASCADE,
+    FOREIGN KEY (plcCode) REFERENCES place(plcCode) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางเปิดหลักสูตร
+CREATE TABLE opencourse (
+    opcCode INT PRIMARY KEY AUTO_INCREMENT,
+    couCode INT NOT NULL,
+    tutCode INT NOT NULL,
+    FOREIGN KEY (couCode) REFERENCES course(couCode) ON DELETE CASCADE,
+    FOREIGN KEY (tutCode) REFERENCES tutor(tutCode) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางการลงทะเบียนเรียน
+CREATE TABLE enrollment (
+    enlCode INT PRIMARY KEY AUTO_INCREMENT,
+    opcCode INT NOT NULL,
+    stdCode INT NOT NULL,
+    FOREIGN KEY (opcCode) REFERENCES opencourse(opcCode) ON DELETE CASCADE,
+    FOREIGN KEY (stdCode) REFERENCES student(stdCode) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางช่องทางการชำระเงิน
+CREATE TABLE channel (
+    chCode INT PRIMARY KEY AUTO_INCREMENT,
+    chName VARCHAR(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ตารางการชำระเงิน
+CREATE TABLE payment (
+    payID INT AUTO_INCREMENT PRIMARY KEY,
+    payDate DATE NOT NULL,
+    payCount DECIMAL(10,2) NOT NULL,
+    payTime TIME NOT NULL,
+    crfCode INT NOT NULL,
+    chCode INT NOT NULL,
+    couCode INT NOT NULL,
+    slipFile VARCHAR(255) NOT NULL,
+    address TEXT NOT NULL,
+    FOREIGN KEY (crfCode) REFERENCES CourseRegistrationFees(crfCode) ON DELETE CASCADE,
+    FOREIGN KEY (chCode) REFERENCES channel(chCode) ON DELETE CASCADE,
+    FOREIGN KEY (couCode) REFERENCES course(couCode) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
