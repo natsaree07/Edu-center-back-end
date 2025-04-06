@@ -1,0 +1,47 @@
+Error: Table 'tutordb.address' doesn't exist at line 64
+Error: Table 'tutordb.address' doesn't exist at line 64
+Error: Table 'tutordb.address' doesn't exist at line 64
+ข้อผิดพลาด: Unknown column 'a.disCode' in 'on clause' ที่บรรทัด 65
+Raw input: 
+Decoded input: 
+Raw input: 
+Decoded input: 
+Raw input: 
+Decoded input: 
+Raw input: 
+Decoded input: 
+Raw input: 
+Decoded input: 
+Raw input: 
+Decoded input: 
+Raw input: 
+ข้อผิดพลาด: ข้อมูล JSON ไม่ถูกต้อง: Syntax error
+Raw input: 
+ข้อผิดพลาด: ข้อมูล JSON ไม่ถูกต้อง: Syntax error
+Raw input: 
+ข้อผิดพลาด: ข้อมูล JSON ไม่ถูกต้อง: Syntax error
+Raw input: 
+ข้อผิดพลาด: ข้อมูล JSON ไม่ถูกต้อง: Syntax error
+Raw input: {"stdCode":5,"opcCode":9}
+Decoded input: Array
+(
+    [stdCode] => 5
+    [opcCode] => 9
+)
+
+Raw input: {"stdCode":5,"opcCode":9}
+Decoded input: Array
+(
+    [stdCode] => 5
+    [opcCode] => 9
+)
+
+Raw input: 
+ข้อผิดพลาด: ข้อมูล JSON ไม่ถูกต้อง: Syntax error ที่บรรทัด 24
+Raw input: {"stdCode":5,"opcCode":9}
+Decoded input: Array
+(
+    [stdCode] => 5
+    [opcCode] => 9
+)
+

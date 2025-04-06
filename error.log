@@ -1,0 +1,99 @@
+[03-Apr-2025 18:01:25 Europe/Berlin] Received data: {"stdCode":"15","opcCode":"7"}
+[03-Apr-2025 18:01:25 Europe/Berlin] stdCode: 15, opcCode: 7
+[03-Apr-2025 18:09:09 Europe/Berlin] Received data: {"stdCode":"15","opcCode":"6"}
+[03-Apr-2025 18:09:09 Europe/Berlin] stdCode: 15, opcCode: 6
+[03-Apr-2025 18:09:18 Europe/Berlin] Received data: {"stdCode":"15","opcCode":"8"}
+[03-Apr-2025 18:09:18 Europe/Berlin] stdCode: 15, opcCode: 8
+[03-Apr-2025 18:41:59 Europe/Berlin] Received data: {"stdCode":"3","opcCode":"9"}
+[03-Apr-2025 18:41:59 Europe/Berlin] stdCode: 3, opcCode: 9
+[03-Apr-2025 18:42:07 Europe/Berlin] Received data: {"stdCode":"3","opcCode":"9"}
+[03-Apr-2025 18:42:07 Europe/Berlin] stdCode: 3, opcCode: 9
+[03-Apr-2025 18:42:25 Europe/Berlin] Received data: {"stdCode":"14","opcCode":"9"}
+[03-Apr-2025 18:42:25 Europe/Berlin] stdCode: 14, opcCode: 9
+[03-Apr-2025 18:42:34 Europe/Berlin] Received data: {"stdCode":"14","opcCode":"9"}
+[03-Apr-2025 18:42:34 Europe/Berlin] stdCode: 14, opcCode: 9
+[03-Apr-2025 18:44:35 Europe/Berlin] Received data: {"stdCode":"14","opcCode":"9"}
+[03-Apr-2025 18:44:35 Europe/Berlin] stdCode: 14, opcCode: 9
+[03-Apr-2025 18:47:39 Europe/Berlin] Received data: {"stdCode":"13","opcCode":"5"}
+[03-Apr-2025 18:47:39 Europe/Berlin] stdCode: 13, opcCode: 5
+[03-Apr-2025 18:50:07 Europe/Berlin] Received data: {"stdCode":"14","opcCode":"8"}
+[03-Apr-2025 18:50:07 Europe/Berlin] stdCode: 14, opcCode: 8
+[03-Apr-2025 18:56:40 Europe/Berlin] RAW BODY: 
+[03-Apr-2025 18:58:13 Europe/Berlin] RAW BODY: 
+[03-Apr-2025 19:17:41 Europe/Berlin] RAW input: 
+[03-Apr-2025 19:20:11 Europe/Berlin] RAW input: 
+[03-Apr-2025 19:25:59 Europe/Berlin] Received data: {"stdCode":"14","opcCode":"6"}
+[03-Apr-2025 19:25:59 Europe/Berlin] stdCode: 14, opcCode: 6
+[03-Apr-2025 19:27:10 Europe/Berlin] Received data: {"stdCode":"3","opcCode":"5"}
+[03-Apr-2025 19:27:10 Europe/Berlin] stdCode: 3, opcCode: 5
+[03-Apr-2025 20:17:47 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"4"}
+[03-Apr-2025 20:17:47 Europe/Berlin] stdCode: 5, opcCode: 4
+[03-Apr-2025 20:21:21 Europe/Berlin] Raw input: 
+[03-Apr-2025 20:22:47 Europe/Berlin] Raw input: '{"stdCode":"1","opcCode":"7"}'
+[03-Apr-2025 20:22:47 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"29","sec-ch-ua-platform":"\"Windows\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:4200","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:4200\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"th,en;q=0.9,af;q=0.8"}
+[03-Apr-2025 20:22:47 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\tutordb\enrollment.php on line 55
+[03-Apr-2025 20:22:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\tutordb\enrollment.php:55
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\tutordb\enrollment.php on line 55
+[03-Apr-2025 20:23:12 Europe/Berlin] Raw input: ''
+[03-Apr-2025 20:23:12 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","___internal-request-id":"a73848cb-f27b-4fb4-9124-5de385e77e12","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Sec-Fetch-Storage-Access":"active","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9,th;q=0.8"}
+[03-Apr-2025 20:23:15 Europe/Berlin] Raw input: ''
+[03-Apr-2025 20:23:15 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","___internal-request-id":"6cf4535c-848f-4279-8c1a-c9877cd747a5","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Sec-Fetch-Storage-Access":"active","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9,th;q=0.8"}
+[03-Apr-2025 20:23:15 Europe/Berlin] Raw input: ''
+[03-Apr-2025 20:23:15 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","___internal-request-id":"61b32654-6d03-44b9-92ff-83933f7de0a7","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Sec-Fetch-Storage-Access":"active","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9,th;q=0.8"}
+[03-Apr-2025 20:23:28 Europe/Berlin] Raw input: ''
+[03-Apr-2025 20:23:28 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","___internal-request-id":"331af52a-1350-43a6-bc43-351f8bb50d2f","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Sec-Fetch-Storage-Access":"active","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9,th;q=0.8"}
+[03-Apr-2025 20:23:29 Europe/Berlin] Raw input: ''
+[03-Apr-2025 20:23:29 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","___internal-request-id":"87fd2fe7-ba7c-44c6-85eb-13ef6eb3e86b","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Sec-Fetch-Storage-Access":"active","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9,th;q=0.8"}
+[03-Apr-2025 20:23:29 Europe/Berlin] Raw input: ''
+[03-Apr-2025 20:23:29 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","___internal-request-id":"6561a841-a34a-4daf-bb48-16fa97e43b6d","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Sec-Fetch-Storage-Access":"active","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9,th;q=0.8"}
+[03-Apr-2025 20:23:29 Europe/Berlin] Raw input: ''
+[03-Apr-2025 20:23:29 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","___internal-request-id":"5186dbea-4617-4a53-86a2-1f8298fbaff4","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Sec-Fetch-Storage-Access":"active","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9,th;q=0.8"}
+[03-Apr-2025 20:23:30 Europe/Berlin] Raw input: ''
+[03-Apr-2025 20:23:30 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","___internal-request-id":"e0033081-ea67-46b2-9334-2b9d79e490c6","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Sec-Fetch-Storage-Access":"active","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9,th;q=0.8"}
+[03-Apr-2025 20:24:10 Europe/Berlin] Raw input: {"stdCode":"1","opcCode":"7"}
+[03-Apr-2025 20:26:21 Europe/Berlin] Raw input: 
+[03-Apr-2025 20:27:47 Europe/Berlin] Raw input: ''
+[03-Apr-2025 20:27:47 Europe/Berlin] Request method: POST
+[03-Apr-2025 20:27:47 Europe/Berlin] Headers: {"Host":"localhost","Connection":"keep-alive","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","___internal-request-id":"1d7f27e2-c378-4450-a4ad-a9806ce22a39","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Accept":"*\/*","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Sec-Fetch-Storage-Access":"active","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9,th;q=0.8"}
+[03-Apr-2025 20:29:10 Europe/Berlin] Received data: {"stdCode":"10","opcCode":"7"}
+[03-Apr-2025 20:29:10 Europe/Berlin] stdCode: 10, opcCode: 7
+[03-Apr-2025 20:31:17 Europe/Berlin] Received data: {"stdCode":"8","opcCode":"6"}
+[03-Apr-2025 20:31:17 Europe/Berlin] stdCode: 8, opcCode: 6
+[03-Apr-2025 20:33:53 Europe/Berlin] Received data: {"stdCode":"8","opcCode":"8"}
+[03-Apr-2025 20:33:53 Europe/Berlin] stdCode: 8, opcCode: 8
+[03-Apr-2025 20:41:21 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"2"}
+[03-Apr-2025 20:41:21 Europe/Berlin] stdCode: 5, opcCode: 2
+[03-Apr-2025 20:42:49 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"9"}
+[03-Apr-2025 20:42:49 Europe/Berlin] stdCode: 5, opcCode: 9
+[03-Apr-2025 20:44:09 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"9"}
+[03-Apr-2025 20:44:09 Europe/Berlin] stdCode: 5, opcCode: 9
+[03-Apr-2025 21:07:15 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"9"}
+[03-Apr-2025 21:07:15 Europe/Berlin] stdCode: 5, opcCode: 9
+[03-Apr-2025 21:08:57 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"9"}
+[03-Apr-2025 21:08:57 Europe/Berlin] stdCode: 5, opcCode: 9
+[03-Apr-2025 21:22:07 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"9"}
+[03-Apr-2025 21:22:07 Europe/Berlin] stdCode: 5, opcCode: 9
+[04-Apr-2025 04:04:21 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"9"}
+[04-Apr-2025 04:04:21 Europe/Berlin] stdCode: 5, opcCode: 9
+[04-Apr-2025 04:21:37 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"9"}
+[04-Apr-2025 04:21:37 Europe/Berlin] stdCode: 5, opcCode: 9
+[04-Apr-2025 04:32:49 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"9"}
+[04-Apr-2025 04:32:49 Europe/Berlin] stdCode: 5, opcCode: 9
+[04-Apr-2025 04:35:34 Europe/Berlin] Received data: {"stdCode":"5","opcCode":"9"}
+[04-Apr-2025 04:35:34 Europe/Berlin] stdCode: 5, opcCode: 9
+[04-Apr-2025 20:51:04 Europe/Berlin] Received data: {"stdCode":"16","opcCode":"8"}
+[04-Apr-2025 20:51:04 Europe/Berlin] stdCode: 16, opcCode: 8
+[04-Apr-2025 20:51:12 Europe/Berlin] Received data: {"stdCode":"16","opcCode":"12"}
+[04-Apr-2025 20:51:12 Europe/Berlin] stdCode: 16, opcCode: 12
+[04-Apr-2025 20:51:23 Europe/Berlin] Received data: {"stdCode":"16","opcCode":"15"}
+[04-Apr-2025 20:51:23 Europe/Berlin] stdCode: 16, opcCode: 15
+[04-Apr-2025 21:01:42 Europe/Berlin] Received data: {"stdCode":"16","opcCode":"2"}
+[04-Apr-2025 21:01:42 Europe/Berlin] stdCode: 16, opcCode: 2
+[05-Apr-2025 08:59:04 Europe/Berlin] Received data: {"stdCode":"17","opcCode":"2"}
+[05-Apr-2025 08:59:04 Europe/Berlin] stdCode: 17, opcCode: 2
+[05-Apr-2025 08:59:17 Europe/Berlin] Received data: {"stdCode":"17","opcCode":"3"}
+[05-Apr-2025 08:59:17 Europe/Berlin] stdCode: 17, opcCode: 3
+[05-Apr-2025 08:59:33 Europe/Berlin] Received data: {"stdCode":"17","opcCode":"5"}
+[05-Apr-2025 08:59:33 Europe/Berlin] stdCode: 17, opcCode: 5
